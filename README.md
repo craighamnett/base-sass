@@ -2,7 +2,7 @@
 
 Clone the base-sass project into your local project.
 
-    git clone git@github.com:mitchellbryson/base-sass.git sass
+    git clone git://github.com/mitchellbryson/base-sass.git sass/base
 
 Run the sass watcher to compile the css every time you save a sass file.
 
