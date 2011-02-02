@@ -78,8 +78,7 @@ fieldset {
 .field, .field-indent, .field-button, .field-radio, .field-inline {
   *zoom: 1;
   clear: left;
-  margin: 0 0 15px;
-  background-color: #ffffaa; }
+  margin: 0 0 15px; }
   .field:after, .field-indent:after, .field-button:after, .field-radio:after, .field-inline:after {
     visibility: hidden;
     display: block;
