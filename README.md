@@ -3,6 +3,13 @@
 A set of sass files that resets elements, builds up defaults and supplies common mixins for front-end development projects. Just clone it into your sass folder and @import it.
 
 
+# Setup
+
+You need to be familiar with [Sass](http://sass-lang.com/) and have the Haml gem installed.
+
+    gem install haml
+    
+
 # Usage
 
 Clone the base-sass project into your local project, in it's own folder.
