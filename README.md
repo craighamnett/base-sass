@@ -1,11 +1,17 @@
+# About
+
+A set of sass files that resets elements, builds up defaults and supplies common mixins for front-end development projects. Just clone it into your sass folder and @import it.
+
+
 # Usage
 
-Clone the base-sass project into your local project.
+Clone the base-sass project into your local project, in it's own folder.
 
     git clone git://github.com/mitchellbryson/base-sass.git sass/base
 
-Create a new sass file in your sass folder to import the base sass.
+Import the main base styles in your project's main sass file.
 
+    // e.g. in sass/styles.sass
     @import base/styles
   
 Run the sass watcher to compile the css every time you save a sass file.
@@ -13,4 +19,3 @@ Run the sass watcher to compile the css every time you save a sass file.
     sass --watch sass:css
 
 The markup supplied in templates gives you an idea for classes to use, mostly for forms.
-The templates folder can be removed.
