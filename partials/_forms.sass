@@ -1,0 +1,126 @@
+$field-width:     280px
+$field-padding:   ($font-size / 2)
+$label-width:     80px
+
+=set-field-padding($padding: $field-padding)
+  input,
+  select,
+  textarea
+    padding: $padding
+    *padding: ($padding / 2) $padding
+    *height: ($font-size * 1.5) + 2px
+  button
+    padding: $padding ($padding * 2)
+    *padding: ($padding / 2)
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    input,
+    select,
+    textarea
+      padding: ($padding - 2px)
+
++set-field-padding()
+
+form
+  padding: 50px   // temporary
+
+fieldset
+  border: 0
+
+.field
+  +clearfix
+  clear: left
+  margin: 0 0 $padding / 2
+  background-color: $notice
+  
+  .description
+    display: block
+    clear: left
+    margin: 3px 0
+    margin-left: $label-width
+    font-size: 90%
+  
+.field-indent
+  @extend .field
+  margin-left: $label-width
+  
+.field-inline
+  @extend .field
+  +float(left)
+  clear: none
+  margin-right: ($padding / 2)
+
+.field-button
+  @extend .field-indent
+  clear: left
+  button
+    margin-right: ($padding / 2)
+
+.field-radio
+  @extend .field-indent
+  input,
+  label
+    width: auto
+    padding: 0
+  input
+    margin: ($field-padding / 2) $field-padding 0 0
+    *margin-top: ($field-padding / 2) - 2px
+    background-color: transparent
+    border: 0
+  label
+    margin-right: ($padding / 2)
+
+label
+  +float(left)
+  width: $label-width
+  padding: ($field-padding + 2px) 0
+  font-weight: bold
+  direction: rtl
+  text-indent: ($field-padding * 2)
+
+input,
+select,
+textarea,
+button
+  +float(left)
+  +rounded(2px)
+  +inner-box-shadow(rgba($color, .2), 0, 1px, 2px)
+  display: block
+  width: $field-width
+  margin: 3px 0
+  background-color: lighten($color, 82%)
+  border: 1px solid lighten($color, 40%)
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  &:focus
+    outline: 0
+    background-color: #fff
+
+select
+  +inner-box-shadow()
+  height: ($font-size * 1.5) + ($field-padding * 2)
+  *margin: $field-padding 0
+  cursor: pointer
+
+textarea
+  height: ($font-size * 1.5) * 5
+
+button, button:visited
+  +rounded(3px)
+  +float(left)
+  width: auto
+  color: #fff
+  background-color: $color
+  font-weight: bold
+  border: 0
+  cursor: pointer
+  *font-size: 98%
+  &:hover,
+  &:focus
+    background-color: lighten($color, 10%)
+    text-decoration: underline
+
+.button
+  @extend button
+  text-decoration: none
+

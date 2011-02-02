@@ -1,0 +1,235 @@
+header, footer, nav, section, aside, article,
+div, ol, ul, dl, li, lh, dt, dd, del, dfn, abbr, cite,
+form, fieldset, legend, label, input, select, textarea, button, .button,
+p, blockquote, address, table, th, td, pre, code,
+span, img, strong, em, a, h1, h2, h3, h4, h5, h6, sub, sup {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background: inherit;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: inherit;
+  line-height: 1.5; }
+
+html {
+  position: relative;
+  z-index: 0;
+  overflow-y: scroll; }
+
+body {
+  position: relative;
+  z-index: 1;
+  color: #1e2022;
+  background: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: antialiased; }
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0; }
+  table th, table td {
+    vertical-align: middle; }
+
+ul, ol, dd {
+  list-style-position: outside; }
+  ul ul, ol ul, dd ul {
+    list-style-type: circle; }
+  ul li, ol li, dd li {
+    margin-left: 2em; }
+
+ol {
+  list-style-type: decimal;
+  list-style-position: outside; }
+  ol ol {
+    list-style-type: lower-roman; }
+
+dl dt, dl lh {
+  font-weight: bold; }
+
+input,
+select,
+textarea {
+  padding: 6px;
+  *padding: 3px 6px;
+  *height: 20px; }
+
+button, .button {
+  padding: 6px 12px;
+  *padding: 3px; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input,
+  select,
+  textarea {
+    padding: 4px; } }
+
+form {
+  padding: 50px; }
+
+fieldset {
+  border: 0; }
+
+.field, .field-indent, .field-button, .field-radio, .field-inline {
+  *zoom: 1;
+  clear: left;
+  margin: 0 0 15px;
+  background-color: #ffffaa; }
+  .field:after, .field-indent:after, .field-button:after, .field-radio:after, .field-inline:after {
+    visibility: hidden;
+    display: block;
+    content: "\0020";
+    height: 0;
+    clear: both; }
+  .field .description, .field-indent .description, .field-button .description, .field-radio .description, .field-inline .description {
+    display: block;
+    clear: left;
+    margin: 3px 0;
+    margin-left: 80px;
+    font-size: 90%; }
+
+.field-indent, .field-button, .field-radio {
+  margin-left: 80px; }
+
+.field-inline {
+  *display: inline;
+  float: left;
+  clear: none;
+  margin-right: 15px; }
+
+.field-button {
+  clear: left; }
+  .field-button button, .field-button .button {
+    margin-right: 15px; }
+
+.field-radio input,
+.field-radio label {
+  width: auto;
+  padding: 0; }
+.field-radio input {
+  margin: 3px 6px 0 0;
+  *margin-top: 1px;
+  background-color: transparent;
+  border: 0; }
+.field-radio label {
+  margin-right: 15px; }
+
+label {
+  *display: inline;
+  float: left;
+  width: 80px;
+  padding: 8px 0;
+  font-weight: bold;
+  direction: rtl;
+  text-indent: 12px; }
+
+input,
+select,
+textarea,
+button,
+.button {
+  *display: inline;
+  float: left;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  -webkit-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  display: block;
+  width: 280px;
+  margin: 3px 0;
+  background-color: #f0f1f2;
+  border: 1px solid #7e868e;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus,
+  .button:focus {
+    outline: 0;
+    background-color: white; }
+
+select {
+  -moz-box-shadow: inset black 0 0 0;
+  -webkit-box-shadow: inset black 0 0 0;
+  box-shadow: inset black 0 0 0;
+  height: 30px;
+  *margin: 6px 0;
+  cursor: pointer; }
+
+textarea {
+  height: 90px; }
+
+button, .button, button:visited, .button:visited {
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  *display: inline;
+  float: left;
+  width: auto;
+  color: white;
+  background-color: #1e2022;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  *font-size: 98%; }
+  button:hover, .button:hover, button:focus, .button:focus, button:visited:hover, .button:visited:hover, button:visited:focus, .button:visited:focus {
+    background-color: #36393d;
+    text-decoration: underline; }
+
+.button {
+  text-decoration: none; }
+
+h1 {
+  font-size: 22px; }
+
+h2 {
+  font-size: 18px; }
+
+h3 {
+  font-size: 16px; }
+
+h4 {
+  font-size: 14px; }
+
+h5, h6 {
+  font-size: 12px; }
+
+h6 {
+  font-weight: normal; }
+
+a {
+  color: #1e2022; }
+  a:hover {
+    text-decoration: underline; }
+  a:visited, aactive {
+    color: #1e2022; }
+
+p a, p strong, p span, p em {
+  font-size: inherit; }
+
+abbr, dfn {
+  text-transform: uppercase;
+  border-bottom: 1px dotted #1e2022;
+  cursor: help; }
+
+code, pre, var {
+  font-family: "Monaco", "Courier", monospace;
+  font-size: 10px;
+  white-space: pre; }
+
+sub {
+  font-size: smaller;
+  vertical-align: sub; }
+
+sup {
+  font-size: smaller;
+  vertical-align: super; }

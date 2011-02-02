@@ -1,0 +1,65 @@
+=float($side: none)
+  *display: inline
+  float: $side
+
+=clearfix
+  *zoom: 1
+  &:after
+    visibility: hidden
+    display: block
+    content: "\0020"
+    height: 0
+    clear: both
+
+=figure
+  position: relative
+  z-index: 2
+  float: inherit
+  display: block
+  text-align: center
+  *
+    float: inherit
+    display: block
+
+=inline-block
+  display: -moz-inline-stack
+  display: inline-block
+  vertical-align: top
+  *zoom: 1
+  *display: inline
+
+=image-replace
+  display: block
+  overflow: hidden
+  background-repeat: no-repeat
+  text-indent: -999em
+
+=blocks($width: 100%, $gutter: 0, $blocks: 3, $element: "li")
+  @if $element == "li"
+    +ul-horizontal
+  +clearfix
+  margin-top: -$gutter
+  margin-left: -$gutter
+  #{$element}
+    +float(left)
+    width: ($width - ($gutter * $blocks)) / $blocks
+    margin-left: $gutter
+    margin-top: $gutter
+    
+=ul-reset
+  margin: 0
+  list-style: none
+  li
+    margin: 0
+
+=ul-horizontal
+  +ul-reset
+  +clearfix
+  li, a
+    +float(left)
+
+=ul-vertical
+  +ul-reset
+  li, a
+    display: block
+    +float(left)

@@ -1,0 +1,43 @@
+h1
+  font-size: $font-size + 10px
+h2
+  font-size: $font-size + 6px
+h3
+  font-size: $font-size + 4px
+h4
+  font-size: $font-size + 2px
+h5, h6
+  font-size: $font-size
+
+h6
+  font-weight: normal
+
+a
+  color: $color
+  &:hover
+    text-decoration: underline
+  &:visited,
+  &active
+    color: $color
+
+p 
+  a, strong, span, em
+    font-size: inherit
+
+abbr, dfn
+  text-transform: uppercase
+  border-bottom: 1px dotted $color
+  cursor: help
+
+code, pre, var
+  font-family: "Monaco", "Courier", monospace
+  font-size: $font-size - 2px
+  white-space: pre
+
+sub
+  font-size: smaller
+  vertical-align: sub
+
+sup
+  font-size: smaller
+  vertical-align: super

@@ -1,0 +1,47 @@
+=border-radius($tl: 0, $tr: 0, $br: 0, $bl: 0)
+  -webkit-border-top-left-radius: $tl
+  -webkit-border-top-right-radius: $tr
+  -webkit-border-bottom-left-radius: $bl
+  -webkit-border-bottom-right-radius: $br
+  -khtml-border-radius: $tl $tr $br $bl
+  -moz-border-radius: $tl $tr $br $bl
+  border-radius: $tl $tr $br $bl
+
+=rounded($radius: 0)
+  -khtml-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=opacity($value: 1)
+  -moz-opacity: $value
+  -webkit-opacity: $value
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})
+  filter: alpha(opacity=#{$value * 100})
+  opacity: $value
+
+=gradient($from: #fff, $to: #000, $backup: #000)
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
+  background: -o-gradient(top, bottom, from($from), to($to))
+  background: -moz-linear-gradient(top, $from, $to)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
+
+=gradient-horizontal($from: #fff, $to: #000, $backup: #000)
+  background: -webkit-gradient(linear, left top, right bottom, from($from), to($to))
+  background: -o-gradient(left, right, from($from), to($to))
+  background: -moz-linear-gradient(top left, $from, $to)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
+
+=box-shadow($color: #000, $x: 0, $y: 0, $blur: 0)
+  -moz-box-shadow: $color $x $y $blur
+  -webkit-box-shadow: $color $x $y $blur
+  box-shadow: $color $x $y $blur
+
+=inner-box-shadow($color: #000, $x: 0, $y: 0, $blur: 0)
+  -moz-box-shadow: inset $color $x $y $blur
+  -webkit-box-shadow: inset $color $x $y $blur
+  box-shadow: inset $color $x $y $blur
+
+=text-shadow($color: $color-dark, $x: 1px, $y: 1px, $blur: 1px)
+  text-shadow: $color $x $y $blur

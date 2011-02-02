@@ -1,0 +1,27 @@
+=color-rgba($color: $color-dark, $alpha: 1)
+  color: rgba($color, $alpha)
+  *color: $color
+
+=background-rgba($color: #fff, $alpha: 1)
+  background-color: rgba($color, $alpha)
+  *background-color: $color
+
+=border-rgba($color: $color-dark, $alpha: 1, $side: false)
+  @if $side
+    border-#{$side}-color: rgba($color, $alpha)
+    *border-#{$side}-color: $color
+  @else
+    border-color: rgba($color, $alpha)
+    *border-color: $color
+
+=border-top-rgba($color: $color-dark, $alpha: 1)
+  +border-rgba($color, $alpha, top)
+
+=border-right-rgba($color: $color-dark, $alpha: 1)
+  +border-rgba($color, $alpha, right)
+
+=border-bottom-rgba($color: $color-dark, $alpha: 1)
+  +border-rgba($color, $alpha, bottom)
+
+=border-left-rgba($color: $color-dark, $alpha: 1)
+  +border-rgba($color, $alpha, left)
