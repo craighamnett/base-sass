@@ -1,27 +1,27 @@
-=color-rgba($color: $color-dark, $alpha: 1)
+=color-rgba($color: $color, $alpha: 1, $fallback: transparent)
   color: rgba($color, $alpha)
-  *color: $color
+  *color: $fallback
 
-=background-rgba($color: #fff, $alpha: 1)
+=background-rgba($color: #fff, $alpha: 1, $fallback: transparent)
   background-color: rgba($color, $alpha)
-  *background-color: $color
+  *background-color: $fallback
 
-=border-rgba($color: $color-dark, $alpha: 1, $side: false)
+=border-rgba($color: $color-dark, $alpha: 1, $side: false, $fallback: transparent)
   @if $side
     border-#{$side}-color: rgba($color, $alpha)
-    *border-#{$side}-color: $color
+    *border-#{$side}-color: $fallback
   @else
     border-color: rgba($color, $alpha)
-    *border-color: $color
+    *border-color: $fallback
 
-=border-top-rgba($color: $color-dark, $alpha: 1)
-  +border-rgba($color, $alpha, top)
+=border-top-rgba($color: $color-dark, $alpha: 1, $fallback: transparent)
+  +border-rgba($color, $alpha, top, $fallback)
 
-=border-right-rgba($color: $color-dark, $alpha: 1)
-  +border-rgba($color, $alpha, right)
+=border-right-rgba($color: $color-dark, $alpha: 1, $fallback: transparent)
+  +border-rgba($color, $alpha, right, $fallback)
 
-=border-bottom-rgba($color: $color-dark, $alpha: 1)
-  +border-rgba($color, $alpha, bottom)
+=border-bottom-rgba($color: $color-dark, $alpha: 1, $fallback: transparent)
+  +border-rgba($color, $alpha, bottom, $fallback)
 
-=border-left-rgba($color: $color-dark, $alpha: 1)
-  +border-rgba($color, $alpha, left)
+=border-left-rgba($color: $color-dark, $alpha: 1, $fallback: transparent)
+  +border-rgba($color, $alpha, left, $fallback)

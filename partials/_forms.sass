@@ -1,7 +1,3 @@
-$field-width:     280px !default
-$field-padding:   ($font-size / 2) !default
-$label-width:     80px !default
-
 =set-field-padding($padding: $field-padding)
   input,
   select,
@@ -61,23 +57,28 @@ fieldset
 
 .field-button
   @extend .field-indent
-  clear: left
   button
     margin-right: ($padding / 2)
 
 .field-radio
   @extend .field-indent
-  input,
-  label
-    width: auto
-    padding: 0
+  clear: none
   input
-    margin: ($field-padding / 2) $field-padding 0 0
-    *margin-top: ($field-padding / 2) - 2px
+    width: auto
+    margin: ($field-padding * 2 - 2px) 0 0 0
+    *margin: ($field-padding * 1.5 - 2px) 0 0 0
+    padding: 0
     background-color: transparent
     border: 0
   label
     margin-right: ($padding / 2)
+    direction: ltr
+    text-indent: $field-padding
+  .description
+    margin-left: 0
+    
+.field-checkbox
+  @extend .field-radio
 
 label
   +float(left)
@@ -85,7 +86,9 @@ label
   padding: ($field-padding + 2px) 0
   font-weight: bold
   direction: rtl
-  text-indent: ($field-padding * 2)
+  text-indent: ($field-padding * 3)
+  &.auto
+    width: auto
 
 input,
 select,
@@ -115,7 +118,7 @@ select
 textarea
   height: ($font-size * 1.5) * 5
 
-button, button:visited
+button
   +rounded(3px)
   +float(left)
   width: auto
@@ -132,5 +135,8 @@ button, button:visited
 
 .button
   @extend button
+  padding: ($field-padding * .99) ($field-padding * 1.5)
   text-decoration: none
+  &:visited
+    color: #fff
 

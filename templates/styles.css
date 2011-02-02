@@ -6,7 +6,7 @@ span, img, strong, em, a, h1, h2, h3, h4, h5, h6, sub, sup {
   margin: 0;
   padding: 0;
   color: inherit;
-  background: inherit;
+  background: transparent;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: inherit;
   line-height: 1.5; }
@@ -69,31 +69,39 @@ button, .button {
   textarea {
     padding: 4px; } }
 
-form {
-  padding: 50px; }
-
 fieldset {
   border: 0; }
 
-.field, .field-indent, .field-button, .field-radio, .field-inline {
+.fieldset-block label {
+  width: auto;
+  direction: ltr;
+  text-indent: 0; }
+.fieldset-block input,
+.fieldset-block select,
+.fieldset-block textarea {
+  clear: left; }
+.fieldset-block .field-button {
+  margin-left: 0; }
+
+.field, .field-indent, .field-button, .field-radio, .field-checkbox, .field-inline {
   *zoom: 1;
   clear: left;
   margin: 0 0 15px; }
-  .field:after, .field-indent:after, .field-button:after, .field-radio:after, .field-inline:after {
+  .field:after, .field-indent:after, .field-button:after, .field-radio:after, .field-checkbox:after, .field-inline:after {
     visibility: hidden;
     display: block;
     content: "\0020";
     height: 0;
     clear: both; }
-  .field .description, .field-indent .description, .field-button .description, .field-radio .description, .field-inline .description {
+  .field .description, .field-indent .description, .field-button .description, .field-radio .description, .field-checkbox .description, .field-inline .description {
     display: block;
     clear: left;
     margin: 3px 0;
-    margin-left: 80px;
+    margin-left: 120px;
     font-size: 90%; }
 
-.field-indent, .field-button, .field-radio {
-  margin-left: 80px; }
+.field-indent, .field-button, .field-radio, .field-checkbox {
+  margin-left: 120px; }
 
 .field-inline {
   *display: inline;
@@ -101,31 +109,35 @@ fieldset {
   clear: none;
   margin-right: 15px; }
 
-.field-button {
-  clear: left; }
-  .field-button button, .field-button .button {
-    margin-right: 15px; }
-
-.field-radio input,
-.field-radio label {
-  width: auto;
-  padding: 0; }
-.field-radio input {
-  margin: 3px 6px 0 0;
-  *margin-top: 1px;
-  background-color: transparent;
-  border: 0; }
-.field-radio label {
+.field-button button, .field-button .button {
   margin-right: 15px; }
+
+.field-radio, .field-checkbox {
+  clear: none; }
+  .field-radio input, .field-checkbox input {
+    width: auto;
+    margin: 10px 0 0 0;
+    *margin: 7px 0 0 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0; }
+  .field-radio label, .field-checkbox label {
+    margin-right: 15px;
+    direction: ltr;
+    text-indent: 6px; }
+  .field-radio .description, .field-checkbox .description {
+    margin-left: 0; }
 
 label {
   *display: inline;
   float: left;
-  width: 80px;
+  width: 120px;
   padding: 8px 0;
   font-weight: bold;
   direction: rtl;
-  text-indent: 12px; }
+  text-indent: 18px; }
+  label.auto {
+    width: auto; }
 
 input,
 select,
@@ -167,7 +179,7 @@ select {
 textarea {
   height: 90px; }
 
-button, .button, button:visited, .button:visited {
+button, .button {
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -180,12 +192,15 @@ button, .button, button:visited, .button:visited {
   border: 0;
   cursor: pointer;
   *font-size: 98%; }
-  button:hover, .button:hover, button:focus, .button:focus, button:visited:hover, .button:visited:hover, button:visited:focus, .button:visited:focus {
+  button:hover, .button:hover, button:focus, .button:focus {
     background-color: #36393d;
     text-decoration: underline; }
 
 .button {
+  padding: 5.94px 9px;
   text-decoration: none; }
+  .button:visited {
+    color: white; }
 
 h1 {
   font-size: 22px; }

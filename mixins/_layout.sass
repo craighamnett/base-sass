@@ -68,3 +68,26 @@
   li, a
     display: block
     +float(left)
+    
+=padding($multiple: 1)
+  padding: ($padding / $multiple) / 2 ($padding / $multiple)
+
+=modal($width: $width)
+  body, html
+    height: 100%
+  .modal
+    +background-rgba($color, .8, lighten($color, 20%))
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  .modal-content
+    +rounded(2px)
+    +box-shadow($color, 0, 0, 5px)
+    position: absolute
+    top: 5%
+    left: 50%
+    width: 500px
+    margin-left: -250px
+    background-color: #fff
