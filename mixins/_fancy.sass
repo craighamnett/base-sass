@@ -1,4 +1,5 @@
 =border-radius($tl: 0, $tr: 0, $br: 0, $bl: 0)
+  -webkit-background-clip: padding-box
   -webkit-border-top-left-radius: $tl
   -webkit-border-top-right-radius: $tr
   -webkit-border-bottom-left-radius: $bl
@@ -8,9 +9,7 @@
   border-radius: $tl $tr $br $bl
 
 =rounded($radius: 0)
-  -khtml-border-radius: $radius
-  -moz-border-radius: $radius
-  border-radius: $radius
+  +border-radius($radius, $radius, $radius, $radius)
 
 =opacity($value: 1)
   -moz-opacity: $value
