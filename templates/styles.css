@@ -102,6 +102,8 @@ fieldset {
 
 .field-indent, .field-button, .field-radio, .field-checkbox {
   margin-left: 120px; }
+  .field-indent .description, .field-button .description, .field-radio .description, .field-checkbox .description {
+    margin-left: 0; }
 
 .field-inline {
   *display: inline;
@@ -146,9 +148,14 @@ button,
 .button {
   *display: inline;
   float: left;
-  -khtml-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -khtml-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
   -moz-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
   -webkit-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
   box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
@@ -180,9 +187,14 @@ textarea {
   height: 90px; }
 
 button, .button {
-  -khtml-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -khtml-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
   *display: inline;
   float: left;
   width: auto;
