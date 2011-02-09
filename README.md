@@ -24,5 +24,3 @@ Import the main base styles in your project's main sass file.
 Run the sass watcher to compile the css every time you save a sass file.
 
     sass --watch sass:css
-
-The markup supplied in templates gives you an idea for classes to use, mostly for forms.
