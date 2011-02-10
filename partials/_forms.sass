@@ -105,6 +105,11 @@ label
   text-indent: ($field-padding * 3)
   &.auto
     width: auto
+  &.join
+    width: auto
+    padding-left: ($field-padding * 2)
+    padding-right: ($field-padding * 2)
+    text-indent: 0
 
 input,
 select,
@@ -127,7 +132,7 @@ button
 
 select
   +inner-box-shadow()
-  height: ($font-size * 1.5) + ($field-padding * 2)
+  height: ($font-size * 1.5) + ($field-padding * 2) - 1px
   *margin: $field-padding 0
   cursor: pointer
 
