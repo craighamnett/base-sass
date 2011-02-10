@@ -6,7 +6,7 @@
     *padding: ($padding / 2) $padding
     *height: ($font-size * 1.5) + 2px
   button
-    padding: $padding ($padding * 2)
+    padding: ($padding - 1px) ($padding * 2)
     *padding: ($padding / 2)
   @media screen and (-webkit-min-device-pixel-ratio: 0)
     input,
@@ -23,14 +23,20 @@ fieldset
   
   label
     width: auto
+    padding-bottom: 0
     direction: ltr
     text-indent: 0
   input,
   select,
   textarea
     clear: left
+    width: 100%
+  
+  .field
+    margin: 0
   
   .field-button
+    margin-top: $padding / 2
     margin-left: 0
 
 .field
@@ -54,9 +60,11 @@ fieldset
   
 .field-inline
   @extend .field
-  +float(left)
+  +inline-block
   clear: none
   margin-right: ($padding / 2)
+  label
+    text-indent: $field-padding
 
 .field-button
   @extend .field-indent
