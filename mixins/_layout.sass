@@ -72,7 +72,7 @@
 =padding($multiple: 1)
   padding: ($padding / $multiple) / 2 ($padding / $multiple)
 
-=modal($width: $width)
+=modal($width: 500px)
   html
     height: 100%
   body
@@ -91,6 +91,6 @@
     *position: absolute
     top: 5%
     left: 50%
-    width: 500px
-    margin-left: -250px
+    width: $width
+    margin-left: -($width / 2)
     background-color: #fff
