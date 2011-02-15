@@ -43,15 +43,15 @@
   @if $element == "li"
     +ul-horizontal
   +clearfix
-  margin-top: -$gutter
+  margin-top: -($gutter / 2)
   margin-left: -$gutter
   margin-bottom: $gutter
   #{$element}
     +float(left)
     width: ($width - ($gutter * $blocks)) / $blocks
     margin-left: $gutter
-    margin-top: $gutter
-    
+    margin-top: ($gutter / 2)
+
 =ul-reset
   margin: 0
   list-style: none
@@ -68,7 +68,7 @@
   +ul-reset
   li, a
     display: block
-    
+
 =padding($multiple: 1)
   padding: ($padding / $multiple) / 2 ($padding / $multiple)
 
