@@ -24,7 +24,7 @@
   background: -moz-linear-gradient(top, $from, $to)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
-  *height: 1px
+  *zoom: 1
 
 =gradient-horizontal($from: #fff, $to: #000)
   background: -webkit-gradient(linear, left top, right bottom, from($from), to($to))
@@ -32,7 +32,7 @@
   background: -moz-linear-gradient(top left, $from, $to)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
-  *height: 1px
+  *zoom: 1
 
 =box-shadow($color: #000, $x: 0, $y: 0, $blur: 0)
   -moz-box-shadow: $color $x $y $blur
