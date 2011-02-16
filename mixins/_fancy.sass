@@ -18,19 +18,21 @@
   filter: alpha(opacity=#{$value * 100})
   opacity: $value
 
-=gradient($from: #fff, $to: #000, $backup: #000)
+=gradient($from: #fff, $to: #000)
   background: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
   background: -o-gradient(top, bottom, from($from), to($to))
   background: -moz-linear-gradient(top, $from, $to)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
+  *height: 1px
 
-=gradient-horizontal($from: #fff, $to: #000, $backup: #000)
+=gradient-horizontal($from: #fff, $to: #000)
   background: -webkit-gradient(linear, left top, right bottom, from($from), to($to))
   background: -o-gradient(left, right, from($from), to($to))
   background: -moz-linear-gradient(top left, $from, $to)
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$from}, endColorstr=#{$to})"
+  *height: 1px
 
 =box-shadow($color: #000, $x: 0, $y: 0, $blur: 0)
   -moz-box-shadow: $color $x $y $blur
