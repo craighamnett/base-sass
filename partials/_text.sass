@@ -20,7 +20,7 @@ a
   &active
     color: $color
 
-p 
+p
   a, strong, span, em
     font-size: inherit
 
@@ -41,3 +41,15 @@ sub
 sup
   font-size: smaller
   vertical-align: super
+
+[unselectable=true]
+  -moz-user-select: none
+  -webkit-user-select: none
+
+[unselectable=false]
+  -moz-user-select: auto
+  -webkit-user-select: auto
+
+p
+  -moz-user-select: auto
+  -webkit-user-select: auto
