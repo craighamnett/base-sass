@@ -1,23 +1,23 @@
 h1
-  font-size: $font-size + 10px
+  font-size: $font-size + 10
 h2
-  font-size: $font-size + 6px
+  font-size: $font-size + 6
 h3
-  font-size: $font-size + 4px
+  font-size: $font-size + 4
 h4
-  font-size: $font-size + 2px
+  font-size: $font-size + 2
 h5, h6
   font-size: $font-size
-
 h6
   font-weight: normal
 
 a
-  color: $color
+  color: blue
+  text-decoration: underline
   &:hover
     text-decoration: underline
-  &active
-    color: $color
+  &:active
+    color: $warning
 
 p
   a, strong, span, em
@@ -29,27 +29,14 @@ abbr, dfn
   cursor: help
 
 code, pre, var
-  font-family: "Monaco", "Courier", monospace
+  font-family: Monaco, Courier, monospace
   font-size: $font-size - 2px
   white-space: pre
 
 sub
-  font-size: smaller
+  font-size: $font-size - 2
   vertical-align: sub
 
 sup
-  font-size: smaller
+  font-size: $font-size - 2
   vertical-align: super
-
-[unselectable=true],
-[unselectable]
-  -moz-user-select: none
-  -webkit-user-select: none
-
-[unselectable=false]
-  -moz-user-select: auto
-  -webkit-user-select: auto
-
-p
-  -moz-user-select: auto
-  -webkit-user-select: auto

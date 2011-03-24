@@ -1,0 +1,27 @@
+=list-reset
+  margin: 0
+  list-style: none
+  li
+    margin: 0
+
+=list-horizontal
+  +list-reset
+  li, a
+    display: inline
+
+=list-vertical
+  +list-reset
+  li, a
+    display: block
+
+=blocks($width: 100%, $gutter: 0, $blocks: 3, $element: "li")
+  @if $element == "li"
+    +list-horizontal
+  +clearfix
+  margin-left: -($gutter)
+  margin-bottom: -($gutter)
+  #{$element}
+    +float(left)
+    width: ($width - ($gutter * $blocks)) / $blocks
+    margin-left: $gutter
+    margin-bottom: $gutter
