@@ -1,0 +1,81 @@
+=form($field: field)
+  
+  input,
+  select,
+  textarea
+    +rounded(3px)
+    border-color: lighten($color, 40%)
+    &.medium
+      width: ($field-width / 2) - ($field-padding / 2)
+    &.small
+      width: ($field-width / 3) - ($field-padding / 2)
+    &:focus
+      border-color: lighten($color, 20%)
+  
+  input,
+  textarea
+    +inner-box-shadow(rgba($color, .2), 0, 1px, 2px)
+    background-color: darken($background, 3%)
+    &:focus
+      background-color: $background
+  
+  select
+    +gradient($background, darken($background, 5%))
+    &:focus
+      +gradient($background, darken($background, 2%))
+  
+  input[type=checkbox],
+  input[type=radio],
+  .#{$field}-checkbox input,
+  .#{$field}-radio input
+    margin-right: $field-padding
+  
+  input[type=submit],
+  button
+    +rounded(3px)
+    
+
+  .#{$field},
+  .#{$field}-checkbox,
+  .#{$field}-radio,
+  .#{$field}-inline,
+  .#{$field}-button
+    +clearfix
+    +float(left)
+    clear: left
+    margin-bottom: ($padding / 2)
+    label
+      display: block
+      padding: $field-padding 0
+      &.join
+        display: inline
+        margin: $field-padding
+      &.inline
+        display: inline
+        margin-right: $field-padding
+        vertical-align: top
+    p
+      padding: $field-padding 0
+      color: lighten($color, 30%)
+      font-size: $font-size - 1
+      
+  .#{$field}-checkbox,
+  .#{$field}-radio
+    label
+      display: inline
+      margin-right: $padding
+      &.title
+        display: block
+        margin-bottom: $field-padding
+      
+  .#{$field}-button
+    margin: $padding 0 0
+    white-space: nowrap
+    input,
+    button
+      margin-right: $field-padding
+      
+  .#{$field}-inline
+    clear: none
+    margin-left: $padding
+    border: 1px solid green
